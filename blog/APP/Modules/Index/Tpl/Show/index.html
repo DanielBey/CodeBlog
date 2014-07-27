@@ -1,0 +1,37 @@
+
+<include file="Common:header"  />
+	<link rel="stylesheet" href="__PUBLIC__/Css/show.css" />
+	<link rel="stylesheet" href="/blog/Data/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+	<script type="text/javascript" src="/blog/Data/ueditor/third-party/SyntaxHighlighter/shCore.js" ></script>
+	<!--语法高亮-->
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+<include file="Common:nav"  />
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+			<div class='location'>
+				<a href="">首页</a>  >
+				<?php $last = count($parent)-1; ?>
+				<foreach name='parent' item='v' key='k'>
+					<a href="{:U('/c_'.$v['id'])}">{$v.name}</a><if condition='$k neq $last'> > </if>
+				</foreach>
+			</div>
+			<div class="title">
+				<p>{$blog.title}</p>
+				<div>
+					<span class='fl'>发布于：{$blog.time|date='Y年m月d日',###}</span>
+					<span class='fr'>已被阅读<script type="text/javascript" src="{:U(GROUP_NAME.'/Show/clickNum',array('id'=>$blog['id']))}" ></script>次
+					</span>
+				</div>
+			</div>
+			<!--强制换行-->
+			<div class='content' style='word-break:break-all'>
+				{$blog.content}
+			</div>
+		</div>
+	<include file="Common:right"  />
+	</div>
+
+<include file="Common:bottom" />

@@ -1,0 +1,25 @@
+<include file="Common:header" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/list.css" />
+<include file="Common:nav"  />
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+			<foreach name="blog" item="v" >
+				<dl>
+					<dt>{$v.name}</dt>
+					<dd class='channel'><a href=" {:U('/'.$v['id'])} " target="_blank">{$v.title}</a> </dd>
+					<dd class='info'>
+						<span class='time'>{$v.time|date="Y/m/d H:i:s",###}</span>
+						<span class='click'>点击：{$v.click}</span>
+					</dd>
+					<dd class='content'>{$v.summary}</dd>
+					<dd class='read'>
+						<a href=" {:U('/'.$v['id'])} " target="_blank">阅读全文>></a>
+					</dd>
+				</dl>
+			</foreach>
+			<p>{$showpage}</p>
+		</div>
+	<include file="Common:right"  />
+	</div>
+<include file="Common:bottom"  />

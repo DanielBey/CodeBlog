@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>更改验证码的配置</title>
+	<css file='__PUBLIC__/Css/public.css'/>
+</head>
+<body>
+	<form action="{:U(GROUP_NAME.'/System/updateVerify')}" method="post">
+		<table class="table">
+			<tr>
+				<th colspan="2">验证码设置</th>
+			</tr>
+			<tr>
+				<td align="right">验证码长度：</td>
+				<td>
+					<input type="text" name="VERIFY_LENGTH" value="{$Think.config.VERIFY_LENGTH}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码宽度：</td>
+				<td>
+					<input type="text" name="VERIFY_WIDTH" value="{$Think.config.VERIFY_WIDTH}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码高度：</td>
+				<td>
+					<input type="text" name="VERIFY_HEIGHT" value="{$Think.config.VERIFY_HEIGHT}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码背景颜色：</td>
+				<td>
+					<input type="text" name="VERIFY_BGCOLOR" value="{$Think.config.VERIFY_BGCOLOR}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码种子：</td>
+				<td>
+					<input type="text" name="VERIFY_SEED" value="{$Think.config.VERIFY_SEED}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码字体文件：</td>
+				<td>
+					<input type="text" name="VERIFY_FONTFILE" value="{$Think.config.VERIFY_FONTFILE}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码字体大小：</td>
+				<td>
+					<input type="text" name="VERIFY_SIZE" value="{$Think.config.VERIFY_SIZE}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码字体颜色：</td>
+				<td>
+					<input type="text" name="VERIFY_COLOR" value="{$Think.config.VERIFY_COLOR}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">SESSION识别名称：</td>
+				<td>
+					<input type="text" name="VERIFY_NAME" value="{$Think.config.VERIFY_NAME}"/>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">存储验证码到SESSION时使用的函数：</td>
+				<td>
+					<input type="text" name="VERIFY_FUNC" value="{$Think.config.VERIFY_FUNC}"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="修改" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>

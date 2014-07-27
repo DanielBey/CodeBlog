@@ -1,0 +1,1 @@
+<?php	return array ( 'WATER_IMAGE' => './Data/logo.png', 'WATER_POS' => '1', 'WATER_ALPHA' => '60', 'WATER_COMPRESSION' => '80', 'WATER_TEXT' => 'Codeblog', 'WATER_ANGLE' => '0', 'WATER_FONTSIZE' => '30', 'WATER_FONTCOLOR' => '#670768', 'WATER_FONTFILE' => './Data/font.ttf', 'WATER_CHARSET' => 'UTF-8', );?>
